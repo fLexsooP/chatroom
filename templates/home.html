@@ -1,6 +1,7 @@
-{% extends 'base.html' %}
-{% block content %}
-<form method="'post" class="'buttons">
+{% extends 'base.html' %} {% block content %}
+<form
+  method="'post"
+  class="'buttons">
   <h3>Enter The Chat Room</h3>
   <div>
     <label>Name:</label>
@@ -27,5 +28,10 @@
     name="create">
     Create a Room
   </button>
+  {%if error%}
+  <ul>
+    <li>{{error}}</li>
+  </ul>
+  {%endif%}
 </form>
 {% endblock %}
